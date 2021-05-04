@@ -1,0 +1,11 @@
+/* define page colours */
+:root {
+    --customdarkgrey: #2E353A;
+    /* get colours with colorzilla */
+}
+
+
+.header{
+    background-color: var(--customdarkgrey);
+    color: white;
+}
