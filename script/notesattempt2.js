@@ -1,6 +1,7 @@
 var currentnote="";
 var notes = new Array();
 var category = new Array();
+var counter = 1;
 
 category.push('cat1');
 category.push('cat2');
@@ -27,10 +28,11 @@ function addListTag(element, index){
 
 function add_item(){
     var x = document.getElementById("form1");
-    notes.push(x.elements[0].value);
-    addListTag(notes[notes.length-1],notes.length);
+    // notes.push(x.elements[0].value);
+    addListTag(x.elements[0].value,counter);
 
-    console.log(notes);
+    // console.log(notes);
+    counter ++;
 
 }
 
@@ -38,17 +40,17 @@ function remove_item(index){
     // if(index=notes.length){
     //     notes.pop;
     // } else {
-    notes.splice(index-1,1);
+    // notes.splice(index-1,1);
     // }
 
-    document.getElementById('output').removeChild(document.getElementById('noteContainer'+index))
+    document.getElementById('output').removeChild(document.getElementById('noteContainer'+index));
 
     // the indexes on the html items don't get updated to match notes array so it breaks..
 
-    document.getElementById('output')
-    notes.forEach()
+    // document.getElementById('output')
+    // notes.forEach()
 
-    console.log(notes);
+    // console.log(notes);
 
 }
 
