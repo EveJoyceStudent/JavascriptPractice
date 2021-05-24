@@ -1,0 +1,162 @@
+:root {
+    /* define custom page colours */
+    --customdarkgrey: #2E353A;
+    /* get colours with colorzilla */
+    
+    /* var used to move cookie around, accessed in js */
+    --randomposition:0;
+}
+
+.header{
+    background-color: var(--customdarkgrey);
+    color: white;
+}
+
+.container{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+    color: white;
+}
+h2{
+    text-align: center;
+}
+
+#cookieButton{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+#cookieButton>span{
+    display: inline-block;
+    margin: auto;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#output>div>div{
+    background-image: url("../images/cookiebg.jpg");
+    padding-bottom: 10px;
+    
+    border-style: solid ;
+    border-width: 1px;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#info-section>div{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#cookies{
+    font-weight: bold;
+}
+
+#upgrade-section>div{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 10px;
+}
+
+.upgradeDescription{
+    font-weight: bold;
+    text-align: center;
+}
+
+.upgradeOwned{
+    text-align: center;
+}
+
+.upgradeCost{
+    text-align: right;
+}
+
+
+#clickCookie{
+    position:absolute;
+    top:-50px;
+    left: var(--randomposition);
+    background-image:url("../images/cookie.png");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+#perSecCookie{
+    position:absolute;
+    top:-50px;
+    left: var(--randomposition);
+    background-image:url("../images/cookie.png");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.animation{
+    animation: drop 1s ease forwards;
+    animation-iteration-count:1;
+  }
+
+
+@keyframes drop{
+    0% {
+		opacity: 0;
+	}
+
+	12% {
+		transform: translateY(10.89vh);
+	}
+
+	24% {
+		transform: translateY(43.56vh);
+	}
+
+	36% {
+        transform: translateY(98.01vh);
+        opacity: 1;
+	}
+
+	54% {
+        transform: translateY(75.02vh);
+	}
+
+	74% {
+		transform: translateY(98.37vh);
+	}
+
+	82% {
+        transform: translateY(93.75vh);
+        opacity: 1;
+	}
+
+	92% {
+		transform: translateY(99.34vh);
+	}
+
+	96% {
+		transform: translateY(98.46vh);
+	}
+
+	100% {
+        transform: translateY(100vh);
+        opacity: 0;
+	}
+  }
